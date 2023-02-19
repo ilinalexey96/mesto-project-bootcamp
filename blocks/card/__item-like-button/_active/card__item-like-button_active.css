@@ -1,0 +1,16 @@
+.card__item-like-button_active {
+    width: 22px;
+    height: 19px;
+    background-image: url(../../../../images/Union.svg);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.card__item-like-button:hover {
+    opacity: .6;
+}
