@@ -7,13 +7,13 @@
     margin: 0;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 929px) {
     .footer__text {
         text-align: start;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 644px) {
     .footer__text {
         font-size: 14px;
         line-height: 16.94px;
