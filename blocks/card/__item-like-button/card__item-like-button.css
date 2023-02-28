@@ -7,10 +7,11 @@
     background-size: contain;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
-    padding-right: 30px;
+    padding-right: 35px;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
 }
 
-.card__item-like-button:hover:before {
+.card__item-like-button:hover {
     opacity: .6;
 }
