@@ -10,13 +10,15 @@
     top: -35px;
     right: -35px;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    background-color: transparent;
 }
 
 .popup__escape-button:hover {
     opacity: .6;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 644px) {
     .popup__escape-button {
         width: 20px;
         height: 20px;
