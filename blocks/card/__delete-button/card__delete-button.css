@@ -7,9 +7,14 @@
     right: 20px;
     background-color: transparent;
     border: none;
-    background-image: url(../../../images/delete.svg);
+    background-image: url(../../../images/Group.svg);
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.card__delete-button:hover {
+    opacity: .6;
 }

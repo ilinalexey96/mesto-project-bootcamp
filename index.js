@@ -16,6 +16,10 @@
     const popupList = Array.from(document.querySelectorAll('.popup'));
     const buttonClosePopupEdit = aboutPopupEdit.querySelector('.popup__close');
     const buttonClosePopupAdd = aboutPopupAdd.querySelector('.popup__close');
+    const imagePopup = document.querySelector('.popup_type_image-place');
+    const imageTitle = imagePopup.querySelector('.popup__image-tittle');
+    const imageFull = imagePopup.querySelector('.popup__image-full');
+    const buttonCloseImagePopup = imagePopup.querySelector('.popup__close');
 
     popupList.forEach((popup) => {
         popup.addEventListener('click', (event) => {
@@ -70,6 +74,13 @@
         elementItem.querySelector('.card__delete-button').addEventListener('click', () => {
             elementItem.remove();
         })
+
+      elementImage.addEventListener('click', () => {
+        imageFull.src = photoCard.link;
+        imageFull.alt = photoCard.name;
+        imageTitle.textContent = photoCard.name;
+        openPopup(imagePopup);
+      });
 
       buttonLike.addEventListener('click', (evt) => {
         evt.target.classList.toggle('card__item-like-button_active')
