@@ -1,9 +1,8 @@
-
 .profile {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 47.25px auto;
     max-width: 880px;
 }
 
@@ -18,5 +17,6 @@
         max-width: 282px;
         flex-direction: column;
         padding-top: 38.25px;
+        margin-bottom: 36px;
     }
 }

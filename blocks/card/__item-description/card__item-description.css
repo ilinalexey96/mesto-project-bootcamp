@@ -1,11 +1,7 @@
 .card__item-description {
-    width: 100%;
-    background-color: #FFFFFF;
-    margin: 0;
-    padding: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    max-width: 246px;
+    margin: 25px auto 31px auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
