@@ -25,7 +25,7 @@
         </section>
         <section class="card">
             <ul class="card__items">
-                <li class="card__item">
+                <!-- <li class="card__item">
                     <img class="card__item-image" src="./images/karachaevsk.jpg" alt="Карачаевск">
                     <div class="card__item-description">
                         <h2 class="card__item-title">Карачаевск</h2>
@@ -66,25 +66,48 @@
                         <h2 class="card__item-title">Карачаево-Ч...</h2>
                         <button class="card__item-like-button" type="button"></button>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__text">&COPY; 2023 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_type_edit">
         <div class="popup__form-container">
-            <button class="popup__escape-button" type="button"></button>
+            <button class="popup__close" type="button"></button>
             <form class="popup__form" name="popupForm">
                 <h2 class="popup__form-title">Редактировать профиль</h2>
-                    <input type="text" class="popup__input" placeholder="Жак-Ив Кусто" id="name" name="name">
-                    <input type="text" class="popup__input" placeholder="Исследователь океана"
+                    <input type="text" class="popup__input popup__item_type_name" placeholder="Жак-Ив Кусто" id="name" name="name">
+                    <input type="text" class="popup__input popup__item_type_about" placeholder="Исследователь океана"
                         id="specialization" name="specialization">
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>
         </div>
-        <script src="./index.js"></script>
+        <div class="popup popup_type_new-card">
+            <div class="popup__form-container">
+                <button class="popup__close" type="button"></button>
+                <form class="popup__form" name="popupForm">
+                    <h2 class="popup__form-title">Новое место</h2>
+                        <input type="text" class="popup__input popup__item_type_name" placeholder="Название" id="input-name-new-card" name="name">
+                        <input type="text" class="popup__input popup__item_type_about" placeholder="Ссылка на картинку"
+                            id="input-about-new-card" name="specialization">
+                    <button class="popup__save-button" type="submit">Создать</button>
+                </form>
+            </div>
+        </div>
+        <template id="card-template">
+            <li class="card__item">
+                <button class="card__delete-button" type="button"></button>
+                <img class="card__item-image" alt="Ваше изображение" src="#">
+                <div class="card__item-description">
+                    <h2 class="card__item-title"></h2>
+                    <button class="card__item-like-button"></button>
+                </div>
+            </li>
+        </template>
+        <script defer src="./index.js"></script>
+        <script src="./cards.js"></script>
 </body>
 </html>

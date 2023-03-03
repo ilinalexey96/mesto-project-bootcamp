@@ -1,4 +1,4 @@
-.popup__escape-button {
+.popup__close {
     width: 32px;
     height: 32px;
     background-color: rgba(0, 0, 0, .1);
@@ -14,12 +14,12 @@
     background-color: transparent;
 }
 
-.popup__escape-button:hover {
+.popup__close:hover {
     opacity: .6;
 }
 
 @media screen and (max-width: 644px) {
-    .popup__escape-button {
+    .popup__close {
         width: 20px;
         height: 20px;
         top: -36px;
