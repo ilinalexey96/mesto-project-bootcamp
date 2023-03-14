@@ -12,7 +12,7 @@
     </header>
     <main class="main">
         <section class="profile">
-                <img class="profile__avatar" alt="Фото Жак-Ив Кусто" src="<%=require('./images/image.jpg')%>">
+            <img class="profile__avatar" alt="Фото Жак-Ив Кусто" src="<%=require('./images/image.jpg')%>">
             <div class="profile__info">
                 <div class="profile__container">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -35,45 +35,47 @@
             <button class="popup__close" type="button"></button>
             <form class="popup__form" name="popupForm" id="profileForm" novalidate>
                 <h2 class="popup__form-title">Редактировать профиль</h2>
-                    <input minlength="2" maxlength="40" type="text" class="popup__input popup__item_type_name" placeholder="Имя" id="profileName" name="name" required>
-                    <span class="popup__input-error-message" id="profileName-error"></span>
-                    <input minlength="2" maxlength="200" type="text" class="popup__input popup__item_type_about" placeholder="О себе"
-                        id="profileAbout" name="specialization" required>
-                        <span class="popup__input-error-message" id="profileAbout-error"></span>
+                <input minlength="2" maxlength="40" type="text" class="popup__input popup__item_type_name"
+                    placeholder="Имя" id="profileName" name="name" required>
+                <span class="popup__input-error-message" id="profileName-error"></span>
+                <input minlength="2" maxlength="200" type="text" class="popup__input popup__item_type_about"
+                    placeholder="О себе" id="profileAbout" name="specialization" required>
+                <span class="popup__input-error-message" id="profileAbout-error"></span>
                 <button class="popup__save-button" type="submit">Сохранить</button>
             </form>
         </div>
+    </div>
+    <div id="newCard" class="popup popup_type_new-card">
+        <div class="popup__form-container">
+            <button class="popup__close" type="button"></button>
+            <form class="popup__form" name="addPlace" id="addPlace" novalidate>
+                <h2 class="popup__form-title">Новое место</h2>
+                <input required type="text" minlength="2" maxlength="30" class="popup__input popup__item_type_title"
+                    placeholder="Название" id="newCardTitle" name="name">
+                <span class="popup__input-error-message" id="newCardTitle-error"></span>
+                <input required type="url" class="popup__input popup__item_type_link" placeholder="Ссылка на картинку"
+                    id="newCardLink" name="specialization">
+                <span class="popup__input-error-message" id="newCardLink-error"></span>
+                <button class="popup__save-button" type="submit">Создать</button>
+            </form>
         </div>
-        <div id="newCard" class="popup popup_type_new-card">
-            <div class="popup__form-container">
-                <button class="popup__close" type="button"></button>
-                <form class="popup__form" name="addPlace" id="addPlace" novalidate>
-                    <h2 class="popup__form-title">Новое место</h2>
-                        <input required type="text" class="popup__input popup__item_type_title" placeholder="Название" id="newCardTitle" name="name">
-                        <span class="popup__input-error-message" id="newCardTitle-error"></span>
-                        <input required type="url" class="popup__input popup__item_type_link" placeholder="Ссылка на картинку"
-                            id="newCardLink" name="specialization">
-                            <span class="popup__input-error-message" id="newCardLink-error"></span>
-                    <button class="popup__save-button" type="submit">Создать</button>
-                </form>
+    </div>
+    <div id="bigImage" class="popup popup_type_image-place">
+        <div class="popup__image-container">
+            <img class="popup__image-full" src="#" alt="подпись к картинке">
+            <h2 class="popup__image-tittle"></h2>
+            <button class="popup__close" type="button"></button>
+        </div>
+    </div>
+    <template id="card-template">
+        <li class="card__item">
+            <button class="card__delete-button" type="button"></button>
+            <img class="card__item-image" alt="Ваше изображение" src="#">
+            <div class="card__item-description">
+                <h2 class="card__item-title"></h2>
+                <button class="card__item-like-button"></button>
             </div>
-        </div>
-        <div id="bigImage" class="popup popup_type_image-place">
-            <div class="popup__image-container">
-                    <img class="popup__image-full" src="#" alt="подпись к картинке">
-                    <h2 class="popup__image-tittle"></h2>
-                <button class="popup__close" type="button"></button>
-            </div>
-        </div>
-        <template id="card-template">
-            <li class="card__item">
-                <button class="card__delete-button" type="button"></button>
-                <img class="card__item-image" alt="Ваше изображение" src="#">
-                <div class="card__item-description">
-                    <h2 class="card__item-title"></h2>
-                    <button class="card__item-like-button"></button>
-                </div>
-            </li>
-        </template>
+        </li>
+    </template>
 </body>
 </html>
