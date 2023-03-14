@@ -30,17 +30,15 @@
 
     initialCards.forEach((item) => {
     enterCard(item.name, item.link);
-    });
+  });
 
-    //Обработчик внесение информации в профиль(Добавлено)
     editBtnProfile.addEventListener("click", function () {
     const formElement = modalEdit.querySelector('.popup__form')
     resetErrors(formElement, validationData);
     openModal(modalEdit);
     setformDefault();
-    });
+  });
 
-    //Обработчик события добавления карточки(Добавлено)
     newLocationBtn.addEventListener("click", function () {
     const formElement = newLocation.querySelector('.popup__form')
     resetErrors( formElement, validationData);
@@ -59,25 +57,21 @@
     }
   });
 
-    //Обработчик для добавления новой карточки(Доработано)
     formNewLocation.addEventListener("submit", addNewCards);
 
-    //Обработчик редактирования профиля(Доработано)
     popupContainer.addEventListener("submit", editProfile);
 
-    //Функция передачи данных из профиля в попап(Добавлено)
     function setformDefault() {
       popupTitle.value = profileName.textContent;
       popupDescription.value = profileAbout.textContent;
-  }
+  };
 
     function editProfile(evt) {
       evt.preventDefault();
       profileName.textContent = popupTitle.value;
       profileAbout.textContent = popupDescription.value;
       closeModal(modalEdit);
-    }
+    };
 
-    //Запуск валидации
     enableValidation(validationData);
  

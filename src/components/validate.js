@@ -1,4 +1,3 @@
-//Функция, которая добавляет класс с ошибкой
 function showInputError(inputElement, formElement, errorMessage, formData) {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorElement.textContent = errorMessage;
@@ -6,7 +5,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     errorElement.classList.add(formData.errorClass);
   }
   
-  //good Функция ошибки очистки
   function hideInputError(inputElement, formElement, formData) {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorElement.textContent = '';
@@ -14,7 +12,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     errorElement.classList.remove(formData.errorClass);
   };
   
-  ///Функция, которая проверяет валидность поля
   function isValid(inputElement, formElement, formData) {
     if (inputElement.validity.valid) {
       inputElement.onblur = () =>{
@@ -44,7 +41,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
    });
   }
   
-  //функция сброса ошибки
   export function resetErrors(formElement, formData) {
     formElement.reset();
     const inputList = Array.from(formElement.querySelectorAll(formData.inputSelector));
@@ -53,8 +49,7 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     input.removeAttribute('data-used');
   })
   }
-  
-  //Добавление функции валидации всем формам
+
   export function enableValidation(formData) {
     const formList = Array.from(document.querySelectorAll(formData.formSelector));
     formList.forEach((form) => {
@@ -68,7 +63,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     });
   }
   
-  //Функция принимает массив поле
   function hasInvalidInput(formElement, formData) {
     const inputList = Array.from(formElement.querySelectorAll(formData.inputSelector));
     return inputList.some(input => {
@@ -77,7 +71,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     })
   };
   
-  // Функция cостояние кнопки переключения принимает массив полей ввода
   function toogleButtonState(formElement, button, formData) {
     if (hasInvalidInput(formElement, formData)) {
       button.classList.add(formData.inactiveButtonClass);
