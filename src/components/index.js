@@ -71,7 +71,7 @@
 
     formNewLocation.addEventListener("submit", addNewCards);
 
-    popupContainer.addEventListener("submit", editProfile);
+    popupContainerForm.addEventListener("submit", editProfile);
 
     formUpdateAvatar.addEventListener("submit", editAvatar);
 
