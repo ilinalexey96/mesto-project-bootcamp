@@ -8,10 +8,9 @@ export function handleEscape(event) {
 };
 
 export function handleOutside(event) {
-  const addModal = document.querySelector('.popup_opened');
   if(!event.target.closest('.popup__form-container')) {
-    closeModal(addModal);
-  };
+    closeModal(event.target);
+  }
 };
 
 export const validationData = {

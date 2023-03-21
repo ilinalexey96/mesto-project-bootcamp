@@ -36,7 +36,7 @@
     <div id="typeEdit" class="popup popup_type_edit">
         <div class="popup__form-container">
             <button class="popup__close" type="button"></button>
-            <form class="popup__form" name="popupForm" id="profileForm" novalidate>
+            <form class="popup__form" name="editProfile" id="profileForm" novalidate>
                 <h2 class="popup__form-title">Редактировать профиль</h2>
                 <input minlength="2" maxlength="40" type="text" class="popup__input popup__item_type_name"
                     placeholder="Имя" id="profileName" name="name" required>
@@ -59,7 +59,7 @@
                 <input required type="url" class="popup__input popup__item_type_link" placeholder="Ссылка на картинку"
                     id="newCardLink" name="specialization">
                 <span class="popup__input-error-message" id="newCardLink-error"></span>
-                <button class="popup__save-button" type="submit">Создать</button>
+                <button class="popup__save-button" id="newLocationbtnSave" type="submit">Создать</button>
             </form>
         </div>
     </div>
@@ -76,9 +76,9 @@
             <form class="popup__form" name="formUpdateAvatar" novalidate>
                 <h2 class="popup__form-title">Обновить аватар</h2>
                 <input required type="url" placeholder="Ссылка на картинку" class="popup__input popup__item_type_avatar"
-                    value="" name="linkAvatar" minlength="2">
+                    value="" name="linkAvatar" minlength="2" id="updateAvatarInput">
                 <span id="updateAvatarInput-error" class="popup__input-error-message"></span>
-                <button class="popup__save-button" type="sumbit">Сохранить</button>
+                <button class="popup__save-button" id="updateAvatarButton" type="sumbit">Сохранить</button>
             </form>
         </div>
     </div>
@@ -89,6 +89,7 @@
             <div class="card__item-description">
                 <h2 class="card__item-title"></h2>
                 <button class="card__item-like-button"></button>
+                <span class="card__like-counter"></span>
             </div>
         </li>
     </template>

@@ -31,7 +31,7 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     }
   }
   
-  function setFormValidityHandler(formElement, formData) {
+  export function setFormValidityHandler(formElement, formData) {
     const submitButton = formElement.querySelector(formData.submitButtonSelector);
     toogleButtonState(formElement, submitButton, formData);
     formElement.addEventListener('input', (evt) => {
@@ -42,11 +42,11 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
   }
   
   export function resetErrors(formElement, formData) {
-    formElement.reset();
-    const inputList = Array.from(formElement.querySelectorAll(formData.inputSelector));
-    inputList.forEach(input => {
-    hideInputError(input, formElement, formData);
-    input.removeAttribute('data-used');
+     formElement.reset();
+     const inputList = Array.from(formElement.querySelectorAll(formData.inputSelector));
+    inputList.forEach((input) => {
+      hideInputError(input, formElement, formData);
+      input.removeAttribute('data-used');
   })
   }
 
@@ -56,8 +56,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
       form.addEventListener('submit', (e) => {
         e.preventDefault()
         resetErrors(form, formData);
-        const submitButton = form.querySelector(formData.submitButtonSelector);
-        toogleButtonState(form, submitButton, formData)
       });
     setFormValidityHandler(form, formData);
     });
@@ -65,13 +63,13 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
   
   function hasInvalidInput(formElement, formData) {
     const inputList = Array.from(formElement.querySelectorAll(formData.inputSelector));
-    return inputList.some(input => {
+    return inputList.some((input) => {
       isValid(input, formElement, formData);
       return !input.validity.valid;
-    })
-  };
+    });
+  }
   
-  function toogleButtonState(formElement, button, formData) {
+  export function toggleButtonState(formElement, button, formData) {
     if (hasInvalidInput(formElement, formData)) {
       button.classList.add(formData.inactiveButtonClass);
       button.setAttribute('disabled', '');
