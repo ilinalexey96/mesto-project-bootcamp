@@ -33,11 +33,11 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
   
   export function setFormValidityHandler(formElement, formData) {
     const submitButton = formElement.querySelector(formData.submitButtonSelector);
-    toogleButtonState(formElement, submitButton, formData);
+    toggleButtonState(formElement, submitButton, formData);
     formElement.addEventListener('input', (evt) => {
     const inputElement = evt.target;
     isValid(inputElement, formElement, formData);
-    toogleButtonState(formElement, submitButton, formData);
+    toggleButtonState(formElement, submitButton, formData);
    });
   }
   
