@@ -54,7 +54,7 @@
     editBtnProfile.addEventListener("click", function () {
       resetErrors(popupContainerForm, validationData);
       openModal(modalEdit);
-      setformDefault();
+      setFormDefault();
     });
     
     newLocationBtn.addEventListener("click", function () {
@@ -94,7 +94,7 @@
       });
     }
 
-    function setformDefault() {
+    function setFormDefault() {
       popupTitle.value = profileName.textContent;
       popupDescription.value = profileAbout.textContent;
   };
@@ -137,9 +137,19 @@
         return;
       }
       button.textContent = "Сохранить"; 
-      button.classList.add(validationData.disabledBtnClass);
       button.removeAttribute("disabled", "");
     }
+
+    // export function renderLoading(isLoading, button) {
+    //   const buttonSave = document.querySelector('.popup__save-button');
+    //   if (isLoading) {
+    //     buttonSave.textContent = 'Сохранение...'
+    //     buttonSave.disabled = true;
+    //   } else {
+    //     buttonSave.textContent = 'Сохранить'
+    //     buttonSave.disabled = false;
+    //   }
+    // };
 
     enableValidation(validationData);
  

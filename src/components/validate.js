@@ -14,7 +14,7 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
   
   function isValid(inputElement, formElement, formData) {
     if (inputElement.validity.valid) {
-      inputElement.onblur = () =>{
+      inputElement.onfocus = () =>{
         inputElement.setAttribute('data-used', 'true');
       }
       hideInputError(inputElement, formElement, formData);
@@ -24,7 +24,7 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
       showInputError(inputElement, formElement, inputElement.validationMessage, formData);
       return;
     }
-    inputElement.onblur = () => {
+    inputElement.onfocus = () => {
       inputElement.setAttribute('data-used', 'true');
       showInputError(inputElement,formElement, inputElement.validationMessage, formData);
     return;

@@ -75,8 +75,6 @@ export function addNewCards(evt) {
   })
   .catch(() => {
     handleError();
-    evt.submitter.classList.add(validationData.disabledBtnClass);
-    button.setAttrubute('disabled', '');
   })
   .finally(() => {
     renderLoading(false, button);
