@@ -54,7 +54,7 @@
     editBtnProfile.addEventListener("click", function () {
       resetErrors(popupContainerForm, validationData);
       openModal(modalEdit);
-      setFormDefault();
+      fillProfileInputs();
     });
     
     newLocationBtn.addEventListener("click", function () {
@@ -94,7 +94,7 @@
       });
     }
 
-    function setFormDefault() {
+    function fillProfileInputs() {
       popupTitle.value = profileName.textContent;
       popupDescription.value = profileAbout.textContent;
   };

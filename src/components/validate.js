@@ -55,7 +55,6 @@ function showInputError(inputElement, formElement, errorMessage, formData) {
     formList.forEach((form) => {
       form.addEventListener('submit', (e) => {
         e.preventDefault()
-        resetErrors(form, formData);
       });
     setFormValidityHandler(form, formData);
     });
